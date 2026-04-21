@@ -107,13 +107,6 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 st.sidebar.markdown("---")
-
-page = st.sidebar.radio(
-    "Navigasi",
-    ["🏠 Overview", "💳 Metode Pembayaran", "🗺️ Pendapatan per Wilayah", "📦 Clustering Seller"]
-)
-
-st.sidebar.markdown("---")
 year_filter = st.sidebar.multiselect(
     "Filter Tahun",
     options=[2017, 2018],
@@ -121,6 +114,12 @@ year_filter = st.sidebar.multiselect(
 )
 
 df_filtered = df_main[df_main['order_purchase_timestamp'].dt.year.isin(year_filter)]
+
+st.sidebar.markdown("---")
+page = st.sidebar.radio(
+    "Navigasi",
+    ["🏠 Overview", "💳 Metode Pembayaran", "🗺️ Pendapatan per Wilayah", "📦 Clustering Seller"]
+)
 
 # Warna hijau Brazil
 GREEN_DARK   = '#15803d'
