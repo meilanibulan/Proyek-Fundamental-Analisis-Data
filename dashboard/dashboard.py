@@ -24,19 +24,32 @@ st.markdown("""
     color: white !important;
 }
 
-/* Normal (tidak ada kotak sama sekali) */
-[data-testid="stSidebar"] .stRadio label {
-    background: transparent;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin: 4px 0;
-    display: block;
-    transition: background 0.2s;
+/* Hilangkan bullet (titik radio) */
+[data-testid="stSidebar"] .stRadio div[role="radiogroup"] > label > div:first-child {
+    display: none;
 }
 
-/* Hover (baru muncul efek) */
+/* Biar item sejajar horizontal */
+[data-testid="stSidebar"] .stRadio label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* jarak icon dan teks */
+    padding: 6px 10px;
+    margin: 4px 0;
+    background: transparent;
+    border-radius: 8px;
+}
+
+/* Hover */
 [data-testid="stSidebar"] .stRadio label:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* Selected */
+[data-testid="stSidebar"] .stRadio input:checked + div {
     background-color: rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 6px 10px;
 }
 
 /* Metric cards */
