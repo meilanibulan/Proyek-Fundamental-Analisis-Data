@@ -99,10 +99,10 @@ df_main = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────────
 st.sidebar.markdown("""
-<div style='text-align:center; padding: 20px 0 10px 0;'>
-    <div style='font-size: 64px;'>🛍️</div>
-    <h2 style='color:white; margin:0; font-size:18px;'>E-Commerce Brazil</h2>
-    <p style='color:rgba(255,255,255,0.8); font-size:13px; margin:4px 0 0 0;'>👩‍💻 Meilani Bulandari Hasibuan</p>
+<div style='text-align:center; padding: 10px 0 6px 0;'>
+    <div style='font-size: 52px; margin-bottom: 6px;'>🛍️</div>
+    <h2 style='color:white; margin:4px 0 2px 0; font-size:17px;'>E-Commerce Brazil</h2>
+    <p style='color:rgba(255,255,255,0.8); font-size:12px; margin:0;'>👩‍💻 Meilani Bulandari Hasibuan</p>
 </div>
 """, unsafe_allow_html=True)
 
