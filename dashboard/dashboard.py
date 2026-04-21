@@ -98,11 +98,11 @@ def load_data():
 df_main = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────────
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/13061/13061619.png", width=120)
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/14659/14659801.png", width=120)
 st.sidebar.title("E-Commerce Brazil")
 st.sidebar.markdown("**👩‍💻 Meilani Bulandari Hasibuan**")
-
 st.sidebar.markdown("---")
+
 year_filter = st.sidebar.multiselect(
     "Filter Tahun",
     options=[2017, 2018],
