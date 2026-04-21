@@ -7,7 +7,7 @@ import streamlit as st
 # ── Page Config ───────────────────────────────────────────────
 st.set_page_config(
     page_title="E-Commerce Brazil Dashboard",
-    page_icon="🛒",
+    page_icon="🛍️",
     layout="wide"
 )
 
@@ -21,24 +21,56 @@ st.markdown("""
 [data-testid="stSidebar"] * {
     color: white !important;
 }
+
+/* Navigasi style seperti menu item - tanpa radio button */
 [data-testid="stSidebar"] .stRadio > div {
-    gap: 6px;
+    gap: 4px;
 }
 [data-testid="stSidebar"] .stRadio label {
     background-color: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 8px 14px;
+    border-radius: 10px;
+    padding: 10px 16px;
     transition: background 0.2s;
     cursor: pointer;
+    display: flex !important;
+    align-items: center;
 }
 [data-testid="stSidebar"] .stRadio label:hover {
     background-color: rgba(255,255,255,0.25);
 }
+/* Sembunyikan radio button bulat */
+[data-testid="stSidebar"] .stRadio label > div:first-child {
+    display: none !important;
+}
+/* Navigasi yang dipilih lebih terang */
+[data-testid="stSidebar"] .stRadio [data-checked="true"] label {
+    background-color: rgba(255,255,255,0.3) !important;
+    font-weight: bold;
+}
 
-/* Tabel header hijau */
+/* Slider warna kuning */
+[data-testid="stSlider"] .st-emotion-cache-1gv3huu {
+    background: #EAB308 !important;
+}
+[data-testid="stSlider"] [data-baseweb="slider"] [role="slider"] {
+    background: #EAB308 !important;
+    border-color: #EAB308 !important;
+}
+div[data-baseweb="slider"] > div > div > div {
+    background: #EAB308 !important;
+}
+div[data-baseweb="slider"] [role="slider"] {
+    background-color: #EAB308 !important;
+    border-color: #CA8A04 !important;
+}
+div[data-testid="stSlider"] div[data-baseweb="slider"] div {
+    background: #EAB308 !important;
+}
+
+/* Tabel header hijau muda */
 thead tr th {
-    background-color: #15803d !important;
-    color: white !important;
+    background-color: #dcfce7 !important;
+    color: #14532d !important;
     font-weight: bold !important;
 }
 </style>
@@ -221,7 +253,7 @@ elif page == "💳 Metode Pembayaran":
         'Rata-rata Cicilan': '{:.2f}x'
     }).set_table_styles([{
         'selector': 'thead th',
-        'props': [('background-color', '#15803d'), ('color', 'white'), ('font-weight', 'bold')]
+        'props': [('background-color', '#dcfce7'), ('color', '#14532d'), ('font-weight', 'bold')]
     }]), use_container_width=True)
 
     st.success("**Insight:** Credit Card mendominasi total nilai transaksi (R$12.5M, ~79%) dengan rata-rata cicilan 3.5x. Platform disarankan memperkuat kemitraan dengan penyedia credit card dan menawarkan promo cicilan 0%.")
@@ -283,7 +315,7 @@ elif page == "🗺️ Pendapatan per Wilayah":
         'Rata-rata Pendapatan (R$)': 'R${:,.2f}'
     }).set_table_styles([{
         'selector': 'thead th',
-        'props': [('background-color', '#15803d'), ('color', 'white'), ('font-weight', 'bold')]
+        'props': [('background-color', '#dcfce7'), ('color', '#14532d'), ('font-weight', 'bold')]
     }]), use_container_width=True)
 
     st.success("**Insight:** São Paulo (SP) mendominasi dengan R$13.3M (~65% total). Terdapat kesenjangan besar antara SP dengan negara bagian lain, menunjukkan peluang ekspansi bisnis yang besar.")
@@ -386,7 +418,7 @@ elif page == "📦 Clustering Seller":
         'Avg Items': '{:.1f}'
     }).set_table_styles([{
         'selector': 'thead th',
-        'props': [('background-color', '#15803d'), ('color', 'white'), ('font-weight', 'bold')]
+        'props': [('background-color', '#dcfce7'), ('color', '#14532d'), ('font-weight', 'bold')]
     }]), use_container_width=True)
 
     st.success("**Insight:** Distribusi seller relatif merata di ketiga kategori. Gap pendapatan antara High Performer dengan Low/Medium sangat signifikan. Platform dapat merancang program insentif berbeda untuk setiap kategori.")
