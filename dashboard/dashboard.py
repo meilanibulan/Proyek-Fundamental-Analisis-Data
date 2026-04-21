@@ -98,7 +98,7 @@ def load_data():
 df_main = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────────
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/14667/14667832.png", width=120)
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/13061/13061619.png", width=120)
 st.sidebar.title("E-Commerce Brazil")
 st.sidebar.markdown("**👩‍💻 Meilani Bulandari Hasibuan**")
 
