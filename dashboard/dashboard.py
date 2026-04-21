@@ -7,7 +7,7 @@ import streamlit as st
 # ── Page Config ───────────────────────────────────────────────
 st.set_page_config(
     page_title="E-Commerce Brazil Dashboard",
-    page_icon="🛍️",
+    page_icon="🛒",
     layout="wide"
 )
 
@@ -24,15 +24,17 @@ st.markdown("""
     color: white !important;
 }
 
-/* Sidebar radio buttons */
+/* Normal (tidak ada kotak sama sekali) */
 [data-testid="stSidebar"] .stRadio label {
-    background-color: rgba(255,255,255,0.1);
+    background: transparent;
     border-radius: 8px;
     padding: 8px 12px;
     margin: 4px 0;
     display: block;
     transition: background 0.2s;
 }
+
+/* Hover (baru muncul efek) */
 [data-testid="stSidebar"] .stRadio label:hover {
     background-color: rgba(255,255,255,0.25);
 }
@@ -87,7 +89,7 @@ st.sidebar.markdown("""
 <div style='text-align:center; padding: 20px 0 10px 0;'>
     <div style='font-size: 64px;'>🛍️</div>
     <h2 style='color:white; margin:0; font-size:18px;'>E-Commerce Brazil</h2>
-    <p style='color:rgba(255,255,255,0.8); font-size:13px; margin:4px 0 0 0;'>Meilani Bulandari Hasibuan</p>
+    <p style='color:rgba(255,255,255,0.8); font-size:13px; margin:4px 0 0 0;'>👩‍💻 Meilani Bulandari Hasibuan</p>
 </div>
 """, unsafe_allow_html=True)
 
