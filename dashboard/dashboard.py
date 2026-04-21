@@ -98,13 +98,9 @@ def load_data():
 df_main = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────────
-st.sidebar.markdown("""
-<div style='text-align:center; padding: 10px 0 6px 0;'>
-    <div style='font-size: 52px; margin-bottom: 64px;'>🛍️</div>
-    <h2 style='color:white; margin:4px 0 2px 0; font-size:17px;'>E-Commerce Brazil</h2>
-    <p style='color:rgba(255,255,255,0.8); font-size:12px; margin:0;'>👩‍💻 Meilani Bulandari Hasibuan</p>
-</div>
-""", unsafe_allow_html=True)
+st.sidebar.image("https://www.flaticon.com/free-icon/commerce_14667832?term=shopping+bucket&page=1&position=13&origin=search&related_id=14667832", width=120)
+st.sidebar.title("E-Commerce Brazil")
+st.sidebar.markdown("**👩‍💻 Meilani Bulandari Hasibuan**")
 
 st.sidebar.markdown("---")
 year_filter = st.sidebar.multiselect(
